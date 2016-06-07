@@ -21,6 +21,7 @@ CREATE TABLE public.usuario
   salt character varying NOT NULL,
   criado_em timestamp without time zone NOT NULL DEFAULT now(),
   id_roles integer NOT NULL,
+  email character varying NOT NULL,
   CONSTRAINT usuario_pkey PRIMARY KEY (id_usuario),
   CONSTRAINT fk_roles FOREIGN KEY (id_roles)
       REFERENCES public.roles (id_roles) MATCH SIMPLE
@@ -31,6 +32,15 @@ WITH (
 );
 ALTER TABLE public.usuario
   OWNER TO leonardbank;
+
+-- Index: public.fki_roles
+
+-- DROP INDEX public.fki_roles;
+
+CREATE INDEX fki_roles
+  ON public.usuario
+  USING btree
+  (id_roles);
 
 /** CRIAÇÃO DA TABELA PESSOA */
 CREATE TABLE public.pessoa
