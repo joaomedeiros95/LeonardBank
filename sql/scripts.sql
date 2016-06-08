@@ -1,16 +1,15 @@
-/** CRIAÇÃO DO ROLE */  
-CREATE ROLE leonardbank LOGIN
-  ENCRYPTED PASSWORD 'md5788da9abf3c626d01be0131061534203'
-  NOSUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;
-  
-/** CRIAÇÃO DA TABELA */
-CREATE DATABASE leonardbank
-  WITH OWNER = leonardbank
-       ENCODING = 'UTF8'
-       TABLESPACE = pg_default
-       LC_COLLATE = 'pt_BR.UTF-8'
-       LC_CTYPE = 'pt_BR.UTF-8'
-       CONNECTION LIMIT = -1;
+﻿/** CRIAÇÃO DA TABELA ROLES */
+CREATE TABLE public.roles
+(
+  id_roles integer NOT NULL DEFAULT nextval('roles_id_roles_seq'::regclass),
+  descricao character varying NOT NULL,
+  CONSTRAINT roles_pkey PRIMARY KEY (id_roles)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.roles
+  OWNER TO leonardbank;
 
 /** CRIAÇÃO DA TABELA USUARIO */
 CREATE TABLE public.usuario
@@ -60,19 +59,6 @@ WITH (
   OIDS=FALSE
 );
 ALTER TABLE public.pessoa
-  OWNER TO leonardbank;
-  
-/** CRIAÇÃO DA TABELA ROLES */
-CREATE TABLE public.roles
-(
-  id_roles integer NOT NULL DEFAULT nextval('roles_id_roles_seq'::regclass),
-  descricao character varying NOT NULL,
-  CONSTRAINT roles_pkey PRIMARY KEY (id_roles)
-)
-WITH (
-  OIDS=FALSE
-);
-ALTER TABLE public.roles
   OWNER TO leonardbank;
   
 /** CRIAÇÃO DA TABELA PEDIDO DE INVESTIMENTO */
