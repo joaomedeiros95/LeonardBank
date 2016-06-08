@@ -2096,7 +2096,7 @@
 
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
+		background-image: url("../../images/ultima_ceia.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2177,7 +2177,7 @@
 
 		body.homepage #header:after {
 			content: '';
-			background: #1C0920;
+			background: #0c3b05;
 			display: block;
 			position: absolute;
 			left: 0;
@@ -2378,13 +2378,13 @@
 		position: relative;
 		overflow: hidden;
 		padding: 6em 0 6em 0;
-		background: #2b252c;
-		color: #fff;
+		background: #0c3b05;
+		color: #bb8e53;
 	}
 
 		#footer .icon.circled {
 			background: #fff;
-			color: #2b252c;
+			color: #0c3b05;
 		}
 
 		#footer header {
