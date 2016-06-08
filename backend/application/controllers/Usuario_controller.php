@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Usuario_controller extends CI_Controller {
 
     public function getAll()
@@ -11,8 +12,6 @@ class Usuario_controller extends CI_Controller {
     		echo $row->id_roles;
     		echo $row->email;
     	}
-
-    	echo "Passou";
     }
 
     public function index() {
