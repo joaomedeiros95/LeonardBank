@@ -15,7 +15,10 @@ class Usuario_controller extends CI_Controller {
     }
 
     public function index() {
-    	echo "Hello World";
+    	$data['title'] = 'Login - Leonard Bank';
+        $this->load->view('includes/header', $data);
+        $this->load->view('login');
+        $this->load->view('includes/footer');
     }
 
     public function login() {
