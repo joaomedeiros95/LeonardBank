@@ -1626,7 +1626,7 @@
 	}
 
 		a:hover {
-			color: #ef8376;
+			color: #bb8e53;
 			border-bottom-color: transparent;
 		}
 
@@ -2012,7 +2012,7 @@
 		button:hover,
 		.button:hover {
 			color: #fff;
-			background: #ef8376;
+			background: #0c3b05;
 		}
 
 		input[type="button"].alt,
