@@ -16,16 +16,16 @@
 				<form action="<?php echo base_url(); ?>/index.php/usuario_controller/login" method="post">
 					<div class="form-login">
 						<p>
-							<input type="text" id="nomeid" placeholder="Usuário/Email" required="required" name="usuario" size="50" />
+							<input type="text" id="usuario" placeholder="Usuário/Email" required name="usuario" size="50" />
 						</p>
 						<p>
-							<input type="password" id="senha" placeholder="Senha" required="required" name="senha" size="50" />
+							<input type="password" id="senha" placeholder="Senha" required name="senha" size="50" />
 						</p>
 						<p>
-							<input type="submit" value="Submit">
+							<input type="submit" value="Login">
 						</p>
 						<p>
-							Não possui login? <a href="#artista">Cadastre-se</a>.
+							Não possui login? <a href="<?php echo base_url(); ?>/index.php/usuario_controller/entrar_cadastro">Cadastre-se</a>.
 						</p>
 					</div>
 				</form>

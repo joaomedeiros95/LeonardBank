@@ -1,5 +1,4 @@
 		<!-- Scripts -->
-			<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 			<script src="<?php echo base_url(); ?>assets/js/jquery.dropotron.min.js"></script>
 			<script src="<?php echo base_url(); ?>assets/js/jquery.scrolly.min.js"></script>
 			<script src="<?php echo base_url(); ?>assets/js/jquery.onvisible.min.js"></script>

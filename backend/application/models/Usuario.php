@@ -21,7 +21,7 @@ class Usuario extends CI_Model {
 	}
 
 	public function getByUser($usuario) {
-		$query = $this->db->where("usuario", $usuario)->get('usuario');
+		$query = $this->db->where("usuario", $usuario)->or_where("email", $usuario)->get('usuario');
 
 		if($query) {
 			return $query->result();
@@ -31,19 +31,48 @@ class Usuario extends CI_Model {
 	}
 
 	public function checkLogin($usuario, $hash) {
-		$resultados = $this->db->where("usuario", $usuario)->where("senha", $hash)->count_all_results('usuario');
+		$where = "(usuario = '" . $usuario . "' OR email = '" . $usuario . "')" . " AND senha = '" . $hash . "'";
+ 		$resultados = $this->db->where($where)->count_all_results('usuario');
 		
 		return $resultados > 0;
 	}
 
-	public function insert($usuario, $senha, $salt, $id_roles, $email) {
+	public function insert($usuario, $senha, $salt, $id_roles, $email, $nome, $cpf, $telefone, $endereco) {
+		$this->db->trans_start();
+
 		$this->usuario = $usuario;
 		$this->senha = $senha;
 		$this->salt = $salt;
 		$this->id_roles = $id_roles;
 		$this->email = $email;
 
-		return $this->db->insert('usuario', $this);
+		if($this->db->insert('usuario', $this)) {
+			$id_usuario = 0;
+	        foreach ($this->getByUser($usuario) as $row) {
+	            $id_usuario = $row->id_usuario;
+	        }
+
+	        if($id_usuario == 0) {
+	            $this->db->trans_rollback();
+	            echo "id_usuario";
+	            return false;
+	        }
+
+	        $this->load->model('pessoa');
+	        if($this->pessoa->insert($nome, $cpf, $telefone, $endereco, $id_usuario)) {
+	            $this->db->trans_complete();
+	            return true;
+	        } else {
+	            $this->db->trans_rollback();
+	            echo "insercao pessoa";
+	            return false;    
+	        }
+		} else {
+			$this->db->trans_rollback();
+			echo "insercao usuario";
+			return false;
+		}
+
 	}
 
 	public function update($id_usuario, $usuario, $senha, $salt, $id_roles, $email) {

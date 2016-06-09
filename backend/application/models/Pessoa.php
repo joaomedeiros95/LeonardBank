@@ -1,6 +1,6 @@
-class Pessoa_model extends CI_Model {
+<?php
+class Pessoa extends CI_Model {
 	
-	public $id_pessoa;
 	public $nome;
 	public $cpf;
 	public $telefone;
@@ -18,7 +18,7 @@ class Pessoa_model extends CI_Model {
 		$this->id_usuario = $id_usuario;
 		$this->endereco_completo = $endereco_completo;
 
-		$this->db->insert('pessoa', $this);
+		return $this->db->insert('pessoa', $this);
 	}
 
 	public function update($id_pessoa, $nome, $cpf, $telefone, $endereco_completo, $id_usuario) {

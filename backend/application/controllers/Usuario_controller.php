@@ -47,15 +47,31 @@ class Usuario_controller extends CI_Controller {
         }
     }
 
+    public function entrar_cadastro() {
+        $data['title'] = 'Cadastro - Leonard Bank';
+        $this->load->view('includes/header', $data);
+        $this->load->view('cadastrar');
+        $this->load->view('includes/footer');
+    }
+
     public function cadastrar() {
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $telefone = $_POST['telefone'];
+
+        $endereco = "";
+        if( isset($_POST['endereco']) ) {        
+            $endereco = $_POST['endereco'];
+        }
+        
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
-        $id_roles = $_POST['id_roles'];
         $email = $_POST['email'];
 
-        if($id_roles == 1) {
-            echo 'Não é permitido cadastro de administrador através da Web.';
-            return;
+        if( isset($_POST['artista']) ) {
+            $id_roles = 2;
+        } else {
+            $id_roles = 3;
         }
 
 		$salt = openssl_random_pseudo_bytes(64);
@@ -64,10 +80,12 @@ class Usuario_controller extends CI_Controller {
         $salt = utf8_encode($salt);
 
         $this->load->model('usuario');
-        if($this->usuario->insert($usuario, $hash, $salt, $id_roles, $email)) {
+        if($this->usuario->insert($usuario, $hash, $salt, $id_roles, $email, $nome, $cpf, $telefone, $endereco)) {
             echo "Usuário cadastrado com sucesso";
+            return;
         } else {
             echo "Ocorreu um erro ao cadastrar o usuário";
+            return;
         }
     }
 
