@@ -1,0 +1,16 @@
+.form-login {
+	width: 50%;
+	margin: auto;
+}
+
+.form-login p {
+	text-align: center;
+}
+
+.form-login input {
+	width: 70%;
+}
+
+.form-login input[type="submit"] {
+	width: 40%;
+}
