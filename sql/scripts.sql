@@ -136,3 +136,9 @@ WITH (
 );
 ALTER TABLE public.investimento
   OWNER TO leonardbank;
+  
+ALTER TABLE public.usuario
+  ADD CONSTRAINT email_unique UNIQUE(email);
+  
+ALTER TABLE public.usuario
+  ADD CONSTRAINT usuario_unique UNIQUE(usuario);
