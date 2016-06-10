@@ -9,19 +9,24 @@
 	<div id="page-wrapper">
 
 		<!-- Banner -->
-			<section id="banner">
+			<section id="banner" style="background: #6d7a69;color: #bec4bc !important;">
 				<header>
-					<h2><strong>Cadastre-se</strong></h2>
+					<h2><strong style="color: #bec4bc;">Cadastre-se</strong></h2>
 				</header>
 				<form action="<?php echo base_url(); ?>/index.php/usuario_controller/cadastrar" method="post">
 					<div class="form-login">
+						<?php
+							if($haserro == true) {
+								echo '<p class="erro">' . $erro . '</p>';
+							}
+						?>
 						<div class="checkartista">
-							<label class="checklabel" id="label_investidor">Investidor</label>
+							<label class="checklabel" id="label_investidor" style="color: #bec4bc;">Investidor</label>
 							<div class="onoffswitch">
 							    <input type="checkbox" name="artista" class="onoffswitch-checkbox" id="myonoffswitch" checked>
 							    <label class="onoffswitch-label" for="myonoffswitch"></label>
 							</div>
-							<label class="checklabel2 checklabel-ativo" id="label_artista">Artista</label>
+							<label class="checklabel2 checklabel-ativo" id="label_artista" style="color: #bec4bc;">Artista</label>
 						</div>
 						<p>
 							<input type="text" id="nome" placeholder="Nome" required name="nome" />
@@ -97,3 +102,8 @@
 
 	</script>
 
+<style>
+body {
+	background: #6d7a69;
+}
+</style>

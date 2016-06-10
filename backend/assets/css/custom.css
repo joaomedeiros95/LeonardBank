@@ -20,6 +20,11 @@
 	margin: auto;
 }
 
+.erro {
+    color: #ff1a1a;
+    font-weight: bold;
+}
+
 /** SWITCH */
 
 .checkartista {

@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Usuario_controller extends CI_Controller {
+class Usuario_controller extends MY_Controller {
 
     public function getAll()
     {
@@ -15,10 +15,11 @@ class Usuario_controller extends CI_Controller {
     }
 
     public function index() {
+        parent::needLogin();
     	$data['title'] = 'Login - Leonard Bank';
-        $this->load->view('includes/header', $data);
-        $this->load->view('login');
-        $this->load->view('includes/footer');
+        $logindata['haserro'] = false;
+        $logindata['erro'] = "";
+        parent::redirecionar($data, $logindata, 'login');
     }
 
     public function login() {
@@ -32,7 +33,10 @@ class Usuario_controller extends CI_Controller {
         }
 
         if($salt == "") {
-            echo "Usuário " . $usuario . " não encontrado!";
+            $data['title'] = 'Login - Leonard Bank';
+            $logindata['haserro'] = true;
+            $logindata['erro'] = "Usuário " . $usuario . " não encontrado!";
+            parent::redirecionar($data, $logindata, 'login');
             return;
         } 
 
@@ -41,20 +45,26 @@ class Usuario_controller extends CI_Controller {
         $hash = hash('sha256', $password);
 
         if($this->usuario->checkLogin($usuario, $hash)) {
-            echo "Usuário logado com sucesso.";
+            $this->session->set_userdata('login', $usuario);
+            redirect('/painel/artista_controller/', 'refresh');
         } else {
-            echo "Login/Senha errados.";
+            $data['title'] = 'Login - Leonard Bank';
+            $logindata['haserro'] = true;
+            $logindata['erro'] = "Usuário " . $usuario . " não encontrado!";
+            parent::redirecionar($data, $logindata, 'login');
+            return;
         }
     }
 
     public function entrar_cadastro() {
         $data['title'] = 'Cadastro - Leonard Bank';
-        $this->load->view('includes/header', $data);
-        $this->load->view('cadastrar');
-        $this->load->view('includes/footer');
+        $cadastrodata['haserro'] = false;
+        $cadastrodata['erro'] = "";
+        parent::redirecionar($data, $cadastrodata, 'cadastrar');
     }
 
     public function cadastrar() {
+        parent::needLogin();
         $nome = $_POST['nome'];
         $cpf = $_POST['cpf'];
         $telefone = $_POST['telefone'];
@@ -84,7 +94,10 @@ class Usuario_controller extends CI_Controller {
             echo "Usuário cadastrado com sucesso";
             return;
         } else {
-            echo "Ocorreu um erro ao cadastrar o usuário";
+            $data['title'] = 'Cadastro - Leonard Bank';
+            $cadastrodata['haserro'] = true;
+            $cadastrodata['erro'] = "Ocorreu um erro ao cadastrar o usuário";
+            parent::redirecionar($data, $cadastrodata, 'cadastrar');
             return;
         }
     }

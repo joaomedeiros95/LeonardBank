@@ -13,7 +13,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Leonard Bank</a></h1>
+								<h1><a href="<?php echo base_url(); ?>" id="logo" style="margin-bottom: 200px;">Leonard Bank</a></h1>
 								<hr />
 								<p>O artista move o mundo</p>
 							</header>
@@ -26,9 +26,11 @@
 						<nav id="nav">
 							<ul>
 								<li><a href="index.html">Início</a></li>
-								<li><a href="#">Artista</a></li>
-								<li><a href="#">Investidor</a></li>
+								<li><a href="#artista" class="scrolly">Artista</a></li>
+								<li><a href="#investidor" class="scrolly">Investidor</a></li>
 								<li><a href="#">Sobre Nós</a></li>
+								<li><a href="<?php echo base_url(); ?>index.php/usuario_controller">Login</a></li>
+								<li><a href="<?php echo base_url(); ?>index.php/usuario_controller/entrar_cadastro">Cadastre-se</a></li>
 							</ul>
 						</nav>
 

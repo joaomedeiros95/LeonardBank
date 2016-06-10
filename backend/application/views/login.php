@@ -9,12 +9,17 @@
 	<div id="page-wrapper">
 
 		<!-- Banner -->
-			<section id="banner">
+			<section id="banner" style="background: #6d7a69;color: #bec4bc !important;">
 				<header>
-					<h2><strong>Login</strong></h2>
+					<h2><strong style="color: #bec4bc;">Login</strong></h2>
 				</header>
 				<form action="<?php echo base_url(); ?>/index.php/usuario_controller/login" method="post">
 					<div class="form-login">
+						<?php
+							if($haserro == true) {
+								echo '<p class="erro">' . $erro . '</p>';
+							}
+						?>
 						<p>
 							<input type="text" id="usuario" placeholder="Usuário/Email" required name="usuario" size="50" />
 						</p>
@@ -33,3 +38,7 @@
 
 	</div>
 
+<style>
+body {
+	background: #6d7a69;
+}
