@@ -28,7 +28,7 @@
 								<li><a href="index.html">Início</a></li>
 								<li><a href="#artista" class="scrolly">Artista</a></li>
 								<li><a href="#investidor" class="scrolly">Investidor</a></li>
-								<li><a href="#">Sobre Nós</a></li>
+								<li><a href="#sobrenos" class="scrolly">Sobre Nós</a></li>
 								<li><a href="<?php echo base_url(); ?>index.php/usuario_controller">Login</a></li>
 								<li><a href="<?php echo base_url(); ?>index.php/usuario_controller/entrar_cadastro">Cadastre-se</a></li>
 							</ul>
@@ -42,19 +42,10 @@
 				<section id="leonard" class="container special">
 					<header>
 						<h2>Bem vindo ao <strong>Leonard Bank</strong>.</h2>
-						<p>
-							Colocar aqui uma breve descrição do Leonard Bank
-						</p>
 					</header>
           <p>
-            Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-            posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-            sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam
-            mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan
-            lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-            consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-            interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-            natoque aenean scelerisque.
+            O Leonard Bank surgiu com a missão de diminuir a distância entre o(a) artista e o(a) investidor de arte, contribuindo assim para o desenvolvimento da arte e para o progresso da humanidade.
+            Trata-se de um meio pelo qual artistas e investidores de arte serão colocados em contato, tendo em vista o fomento da criação artística e a democratização da arte enquanto investimento financeiro.
           </p>
           <footer>
             <a href="#artista" class="button circled scrolly">Artista</a>
@@ -68,13 +59,10 @@
 
 					<section id="artista" class="container special">
 						<header>
-							<h2><a href="#">Artista</a></h2>
-							<p>
-								Descrição simples
-							</p>
+							<h2><a href="#">Artista Visual</a></h2>
 						</header>
 						<p>
-							Descrição um pouco maior
+							O(a) artista é compreendido enquanto ser humano propulsor de arte, criatividade, entendimento de si e do mundo, usando os mais variados meios e suportes (pintura, escultura, fotografia, performance, instalação, assemblage, body art, colagens). A expressão artística é definida pelo(a) artista que elabora seu projeto e avalia o interesse do(a) investidor(a) em financiar seu processo criativo. 
 						</p>
 						<footer>
 							<a href="#" class="button">Saiba mais</a>
@@ -88,13 +76,35 @@
 
 					<section id="investidor" class="container special">
             <header>
-							<h2><a href="#">Investidor</a></h2>
-							<p>
-								Descrição simples
-							</p>
+							<h2><a href="#">Investidor(a)</a></h2>
 						</header>
 						<p>
-							Descrição um pouco maior
+							O(A) investidor(a) de artes visuais tem a sua escolha uma opção de retorno financeiro rápido, fácil, seguro e rentável uma vez que tem a oportunidade de adquirir uma obra de arte em seu nascedouro, com valores abaixo do marcado e ainda contribui para o desenvolvimento da arte e da humanidade.  
+						</p>
+						<footer>
+							<a href="#" class="button">Saiba mais</a>
+						</footer>
+
+				</div>
+
+			<!-- Features -->
+				<div class="wrapper style1">
+
+					<section id="sobrenos" class="container special">
+            <header>
+							<h2><a href="#">Sobre Nós</a></h2>
+						</header>
+						<p>
+							<strong>João Eduardo</strong> ainda não sabe como se descrever. Estuda bacharelado em Tecnologia da Informação, com ênfase em engenharia de software, na Universidade Federal do Rio Grande do Norte - UFRN. Gosta de programar. E essa é a sua contribuição no trabalho da equipe.
+						</p>
+						<p>
+							<strong>Renato Oliveira</strong> é estudante de Administração na Universidade Federal do Rio Grande do Norte.
+						</p>
+						<p>
+							<strong>Rúben Barbosa</strong> cursa bacharelado em Tecnologia da Informação na Universidade Fedeeral do Rio Grande do Norte - UFRN e prefere programar.
+						</p>
+						<p>
+							<strong>Sehfora</strong> estuda Artes Visuais na Universidade Federal do Rio Grande do Norte - UFRN. É apaixonada por Artes Visuais.
 						</p>
 						<footer>
 							<a href="#" class="button">Saiba mais</a>
