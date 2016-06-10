@@ -13,7 +13,7 @@
 				<header>
 					<h2><strong style="color: #bec4bc;">Cadastre-se</strong></h2>
 				</header>
-				<form action="<?php echo base_url(); ?>/index.php/usuario_controller/cadastrar" method="post">
+				<form action="<?php echo base_url(); ?>index.php/usuario_controller/cadastrar" method="post">
 					<div class="form-login">
 						<?php
 							if($haserro == true) {
