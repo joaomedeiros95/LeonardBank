@@ -30,7 +30,7 @@
 							<input type="submit" value="Login">
 						</p>
 						<p>
-							Não possui login? <a href="<?php echo base_url(); ?>/index.php/usuario_controller/entrar_cadastro">Cadastre-se</a>.
+							Não possui login? <a href="<?php echo base_url(); ?>index.php/usuario_controller/entrar_cadastro">Cadastre-se</a>.
 						</p>
 					</div>
 				</form>
@@ -42,3 +42,4 @@
 body {
 	background: #6d7a69;
 }
+</style>

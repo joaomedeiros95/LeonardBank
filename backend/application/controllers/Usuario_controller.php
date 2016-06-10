@@ -46,7 +46,7 @@ class Usuario_controller extends MY_Controller {
 
         if($this->usuario->checkLogin($usuario, $hash)) {
             $this->session->set_userdata('login', $usuario);
-            redirect('/painel/artista_controller/', 'refresh');
+            redirect('painel/artista_controller/', 'refresh');
         } else {
             $data['title'] = 'Login - Leonard Bank';
             $logindata['haserro'] = true;

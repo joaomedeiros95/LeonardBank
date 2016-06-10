@@ -50,7 +50,7 @@
 							<input type="submit" value="Cadastrar">
 						</p>
 						<p>
-							Já possui login? <a href="<?php echo base_url(); ?>/index.php/usuario_controller/index">Faça login</a>.
+							Já possui login? <a href="<?php echo base_url(); ?>index.php/usuario_controller/index">Faça login</a>.
 						</p>
 					</div>
 				</form>
