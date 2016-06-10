@@ -13,7 +13,7 @@
 				<header>
 					<h2><strong style="color: #bec4bc;">Login</strong></h2>
 				</header>
-				<form action="<?php echo base_url(); ?>/index.php/usuario_controller/login" method="post">
+				<form action="<?php echo base_url(); ?>index.php/usuario_controller/login" method="post">
 					<div class="form-login">
 						<?php
 							if($haserro == true) {
