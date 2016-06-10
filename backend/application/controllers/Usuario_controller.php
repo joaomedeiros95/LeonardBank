@@ -57,6 +57,7 @@ class Usuario_controller extends MY_Controller {
     }
 
     public function entrar_cadastro() {
+        parent::needLogin();
         $data['title'] = 'Cadastro - Leonard Bank';
         $cadastrodata['haserro'] = false;
         $cadastrodata['erro'] = "";
@@ -64,7 +65,6 @@ class Usuario_controller extends MY_Controller {
     }
 
     public function cadastrar() {
-        parent::needLogin();
         $nome = $_POST['nome'];
         $cpf = $_POST['cpf'];
         $telefone = $_POST['telefone'];
@@ -91,8 +91,8 @@ class Usuario_controller extends MY_Controller {
 
         $this->load->model('usuario');
         if($this->usuario->insert($usuario, $hash, $salt, $id_roles, $email, $nome, $cpf, $telefone, $endereco)) {
-            echo "Usuário cadastrado com sucesso";
-            return;
+            print "<script type=\"text/javascript\">alert('Usuário cadastrado com sucesso!');</script>";
+            redirect('usuario_controller', 'refresh');
         } else {
             $data['title'] = 'Cadastro - Leonard Bank';
             $cadastrodata['haserro'] = true;

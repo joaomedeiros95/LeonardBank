@@ -13,7 +13,7 @@ class MY_Controller extends CI_Controller {
 
 	public function needLogin() {
 		if($this->session->userdata('login') != NULL) {
-			redirect('/painel/artista_controller/', 'refresh');
+			redirect('painel/artista_controller/', 'refresh');
 		}	
 	}
 
