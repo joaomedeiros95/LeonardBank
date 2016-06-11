@@ -65,7 +65,7 @@
 							O(a) artista é compreendido enquanto ser humano propulsor de arte, criatividade, entendimento de si e do mundo, usando os mais variados meios e suportes (pintura, escultura, fotografia, performance, instalação, assemblage, body art, colagens). A expressão artística é definida pelo(a) artista que elabora seu projeto e avalia o interesse do(a) investidor(a) em financiar seu processo criativo. 
 						</p>
 						<footer>
-							<a href="#" class="button">Saiba mais</a>
+							<a href="<?php echo base_url(); ?>index.php/usuario_controller/entrar_cadastro" class="button">Cadastre-se</a>
 						</footer>
 					</section>
 
@@ -82,7 +82,7 @@
 							O(A) investidor(a) de artes visuais tem a sua escolha uma opção de retorno financeiro rápido, fácil, seguro e rentável uma vez que tem a oportunidade de adquirir uma obra de arte em seu nascedouro, com valores abaixo do marcado e ainda contribui para o desenvolvimento da arte e da humanidade.  
 						</p>
 						<footer>
-							<a href="#" class="button">Saiba mais</a>
+							<a href="<?php echo base_url(); ?>index.php/usuario_controller/entrar_cadastro" class="button">Cadastre-se</a>
 						</footer>
 
 				</div>
@@ -143,7 +143,7 @@
 							</div>
 						</div>
 						<footer>
-							<a href="#" class="button">Saiba mais</a>
+							<a href="#" id="gototop" class="button">Volte para o Topo</a>
 						</footer>
 
 				</div>
@@ -156,7 +156,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											<li>&copy; <?php echo date("Y"); ?> - Leonard Bank. All rights reserved.</li>
 										</ul>
 									</div>
 
@@ -168,4 +168,11 @@
 
 		</div>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#gototop").click(function() {
+			$('html, body').animate({ scrollTop: 0 }, 1000);
+		});
+	});
+</script>
 
