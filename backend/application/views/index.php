@@ -91,21 +91,57 @@
 				<div class="wrapper style1">
 
 					<section id="sobrenos" class="container special">
-            <header>
+            			<header>
 							<h2><a href="#">Sobre Nós</a></h2>
 						</header>
-						<p>
-							<strong>João Eduardo</strong> ainda não sabe como se descrever. Estuda bacharelado em Tecnologia da Informação, com ênfase em engenharia de software, na Universidade Federal do Rio Grande do Norte - UFRN. Gosta de programar. E essa é a sua contribuição no trabalho da equipe.
-						</p>
-						<p>
-							<strong>Renato Oliveira</strong> é estudante de Administração na Universidade Federal do Rio Grande do Norte.
-						</p>
-						<p>
-							<strong>Rúben Barbosa</strong> cursa bacharelado em Tecnologia da Informação na Universidade Fedeeral do Rio Grande do Norte - UFRN e prefere programar.
-						</p>
-						<p>
-							<strong>Sehfora</strong> estuda Artes Visuais na Universidade Federal do Rio Grande do Norte - UFRN. É apaixonada por Artes Visuais.
-						</p>
+						<div class="container">
+							<div class="row">
+								<div class="3u 6u(mobile)">
+									<p class="equipe-img">
+										<img  src="<?php echo base_url(); ?>images/equipe/joao.jpg" alt="João Eduardo Medeiros" title="João Eduardo Medeiros" />
+									</p>
+									<p style="text-align:center;">
+										<strong>João Eduardo Medeiros</strong>
+									</p>
+									<p>
+										Bacharel em Tecnologia da Informação, com ênfase em Engenharia de Software, pela Universidade Federal do Rio Grande do Norte (UFRN). Programa por paixão e é entusiasta por tecnologia.
+									</p>
+								</div>
+								<div class="3u 6u(mobile)">
+									<p class="equipe-img">
+										<img  src="<?php echo base_url(); ?>images/equipe/renato.jpg" alt="Renato Oliveira" title="Renato Oliveira" />
+									</p>
+									<p style="text-align:center;">
+										<strong>Renato Oliveira</strong>
+									</p>
+									<p>
+										Estudante de Administração na Universidade Federal do Rio Grande do Norte (UFRN).
+									</p>
+								</div>
+								<div class="3u 6u(mobile)">
+									<p class="equipe-img">
+										<img  src="<?php echo base_url(); ?>images/equipe/ruben.jpg" alt="Rúben Barbosa" title="Rúben Barbosa" />
+									</p>
+									<p style="text-align:center;">
+										<strong>Rúben Barbosa</strong>
+									</p>
+									<p>
+										Cursa bacharelado em Tecnologia da Informação na Universidade Federal do Rio Grande do Norte (UFRN) e prefere programar.
+									</p>
+								</div>
+								<div class="3u 6u(mobile)">
+									<p class="equipe-img">
+										<img  src="<?php echo base_url(); ?>images/equipe/sefora.jpg" alt="Sehfora" title="Sehfora" />
+									</p>
+									<p style="text-align:center;">
+										<strong>Sehfora</strong>
+									</p>
+									<p>
+										Estuda Artes Visuais na Universidade Federal do Rio Grande do Norte (UFRN). É apaixonada por Artes Visuais.
+									</p>
+								</div>
+							</div>
+						</div>
 						<footer>
 							<a href="#" class="button">Saiba mais</a>
 						</footer>

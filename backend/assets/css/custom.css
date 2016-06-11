@@ -25,6 +25,20 @@
     font-weight: bold;
 }
 
+.equipe-img {
+    width: 60%;
+    margin:auto;
+    margin-bottom: 15px;
+}
+
+.equipe-img img {
+    width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 5px solid #6d7a69;
+}
+
 /** SWITCH */
 
 .checkartista {
