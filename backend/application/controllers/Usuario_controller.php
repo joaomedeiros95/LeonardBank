@@ -50,7 +50,7 @@ class Usuario_controller extends MY_Controller {
         } else {
             $data['title'] = 'Login - Leonard Bank';
             $logindata['haserro'] = true;
-            $logindata['erro'] = "Usuário " . $usuario . " não encontrado!";
+            $logindata['erro'] = "Login/Senha errados!";
             parent::redirecionar($data, $logindata, 'login');
             return;
         }
